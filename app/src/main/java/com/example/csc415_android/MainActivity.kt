@@ -2,9 +2,10 @@ package com.example.csc415_android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.commit
+import com.example.csc415_android.ui.Player_Detail_Fragment
 import com.example.csc415_android.R.id.player_recycler_view
+import com.example.csc415_android.ui.Player_List_Fragment
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -12,31 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(player_recycler_view)
-
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        val players = mutableListOf<Player>()
-
-        for(i in 0 .. 30 ){
-            players.add(createPlayer())
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, Player_List_Fragment())
+            addToBackStack(null)
         }
-        val adapter = PlayerAdapter(players)
-        recyclerView.adapter = adapter
-
-
     }
-    private fun createPlayer()= Player(
-        name = "Ricardo Kaka",
-        image = ,
-        age = Random.nextInt(10,35),
-        nationality = "Brazil"
-        value = ,
-        team = ,
-        league = ,
-        goal = 4,
-        trophy =,
-
-
-
-    )
 }

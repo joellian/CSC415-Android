@@ -5,9 +5,11 @@ data class Player(
     val name: String,
     val age: Int,
     val image: Int,
-    val value: Int,
+    val market_value: Double,
     val team: String,
     val league: String,
-    val goal: List<Int>,
-    val trophy: List<String>
+    val goal: Int,
+    val number: Int
+    //val mutableList: AbstractMutableListtrophy: List<String>
+
 )
