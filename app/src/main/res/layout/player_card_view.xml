@@ -28,7 +28,7 @@
             android:layout_marginStart="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@mipmap/kaka" />
+            tools:src="@drawable/dida" />
 
         <TextView
             android:id="@+id/player_name"
