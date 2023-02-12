@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FB090B"
-       android:backgroundTintMode="add"
+        android:backgroundTintMode="add"
 
         >
 
@@ -28,7 +28,8 @@
             android:layout_marginStart="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/dida" />
+            tools:src="@mipmap/kaka"
+            android:contentDescription="@string/image_of_player"/>
 
         <TextView
             android:id="@+id/player_name"

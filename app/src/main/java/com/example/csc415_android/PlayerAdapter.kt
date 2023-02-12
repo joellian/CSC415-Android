@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide
 import com.example.csc415_android.ui.Player_Detail_Fragment
 import kotlinx.coroutines.NonDisposableHandle.parent
 
+
+
 class PlayerAdapter (private val players:List<Player>) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerViewHolder {
@@ -73,4 +75,6 @@ class PlayerAdapter (private val players:List<Player>) : RecyclerView.Adapter<Pl
     }
 
 
-}
+ }
+
+
